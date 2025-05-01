@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <script src="/main.js" defer></script>
+    <script src="/mushroom-filter.js" defer></script>
   </head>
 
   <body>
@@ -92,13 +93,13 @@
           <div class="flow">
             <h2 class="section-title">Get to know your mushrooms</h2>
             <div class="flex-group">
-              <select>
+              <select name="season" id="season" hidden>
                 <option value="all">Season: All</option>
                 <option value="spring">Season: Spring</option>
                 <option value="summer">Season: Summer</option>
                 <option value="fall">Season: Fall</option>
               </select>
-              <select>
+              <select name="edible" id="edible" hidden>
                 <option value="all">Type: All</option>
                 <option value="edible">Edible</option>
                 <option value="toxic">Toxic</option>
@@ -106,7 +107,7 @@
             </div>
 
             <!--grid of mushrooms-->
-            <div class="grid-auto-fit">
+            <div class="grid-auto-fill">
               <div class="card">
                 <h3 class="card__title">Chanterelle</h3>
                 <ul
@@ -399,6 +400,7 @@
               </div>
             </div>
           </div>
+          <div class="no-results-message" hidden>No matches for these</div>
         </div>
       </section>
 
