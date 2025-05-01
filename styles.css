@@ -85,6 +85,12 @@
     --clr-green-400: hsl(143, 19%, 49%);
     --clr-green-500: hsl(143, 38%, 37%);
     --clr-green-600: hsl(145, 29%, 19%);
+
+    --clr-brown-100: hsl(10, 5%, 90%);
+    --clr-brown-200: hsl(9, 7%, 85%);
+    --clr-brown-300: hsl(9, 8%, 75%);
+    --clr-brown-400: hsl(0, 6%, 60%);
+
     --clr-brown-500: hsl(10, 5%, 25%);
     --clr-brown-600: hsl(9, 7%, 21%);
     --clr-brown-700: hsl(9, 8%, 16%);
@@ -148,6 +154,20 @@
     --border-radius-1: 0.25rem;
     --border-radius-2: 0.5rem;
     --border-radius-3: 0.75rem;
+
+    @media (prefers-colors-scheme: light) {
+      --text-main: var(--clr-brown-800);
+      --text-high-contrast: var(--clr-900);
+
+      --background-accent-light: var(--clr-green-600);
+      --background-accent-main: var(--clr-green-500);
+      --background-accent-dark: var(--clr-green-400);
+      --background-extra-light: var(--clr-white);
+      --background-light: var(--clr-brown-100);
+      --background-main: var(--clr-brown-200);
+      --background-dark: var(--clr-brown-300);
+      --background-extra-dark: var(--clr-brown-400);
+    }
   }
 
   html {
@@ -332,7 +352,7 @@
     @media (width < 760px) {
       display: none;
       opacity: 0;
-      transition: opacity 1s, display 1s, translate 1s;
+      transition: opacity 0.25s, display 0.25s, translate 0.25s;
       transition-behavior: allow-discrete;
       translate: 100% 0;
       position: absolute;
@@ -352,17 +372,17 @@
       }
 
       li {
-        --delay: 1s;
+        --delay: 0.25s;
         translate: 50%;
-        transition: translate 1s var(--delay), opacity 1s var(--delay);
+        transition: translate 0.25s var(--delay), opacity 0.25s var(--delay);
       }
 
       li:nth-child(2) {
-        --delay: 1.25s;
+        --delay: 0.5s;
       }
 
       li:nth-child(3) {
-        --delay: 1.5s;
+        --delay: 0.75s;
       }
 
       li + li {
